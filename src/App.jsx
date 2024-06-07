@@ -19,20 +19,20 @@ const dummyData = [
   },
 ];
 
-const toggleCompleted = (todoId) => {
-  const updatedTodos = todos.map((todo) => {
-    if (todo.id === todoId) {
-      todo.completed = !todo.completed;
-    }
-    return todo;
-  });
-  setTodos(updatedTodos);
-};
-
 function App() {
   const [todos, setTodos] = useState(dummyData);
 
   console.log(todos);
+
+  const toggleCompleted = (todoId) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === todoId) {
+        todo.completed = !todo.completed;
+      }
+      return todo;
+    });
+    setTodos(updatedTodos);
+  };
 
   return (
     <div style={styles.container}>
