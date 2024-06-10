@@ -1,6 +1,6 @@
 import React from "react";
 
-const TodoItem = ({ todo, toggleCompleted }) => {
+const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
   const getTodoTitleStyle = () => {
     if (todo.completed === true) {
       return { textDecoration: "line-through" };
@@ -13,7 +13,9 @@ const TodoItem = ({ todo, toggleCompleted }) => {
     <div style={styles.todoItem}>
       <input type="checkbox" style={styles.checkbox} onChange={() => toggleCompleted(todo.id)} />
       <p style={getTodoTitleStyle()}>{todo.title}</p>
-      <button style={styles.button}>x</button>
+      <button style={styles.button} onClick={() => deleteTodo(todo.id)}>
+        x
+      </button>
     </div>
   );
 };
