@@ -48,10 +48,18 @@ const styles = {
     width: "40%",
     fontSize: "16px",
     padding: "0 16px",
+    backgroundColor: "#333",
+    color: "#fff",
+    border: "1px solid #444",
   },
   button: {
     height: "72px",
     fontSize: "16px",
+    backgroundColor: "#BB0000",
+    color: "#fff",
+    border: "none",
+    cursor: "pointer",
+    marginLeft: "10px",
   },
 };
 

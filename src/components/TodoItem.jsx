@@ -22,25 +22,17 @@ const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
 
 const styles = {
   todoItem: {
-    border: "2px solid #f4f4f4",
+    border: "2px solid #444",
+    backgroundColor: "#1e1e1e",
     fontSize: "24px",
-    // Tambahkan styles di bawah ini
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     padding: "20px",
+    color: "#ffffff",
   },
-  // Tambahkan styles di bawah ini
   checkbox: {
     marginRight: "10px",
-    height: "18px",
-    width: "18px",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "0 20px",
-  },
-  checkbox: {
     height: "18px",
     width: "18px",
   },
@@ -55,5 +47,4 @@ const styles = {
     fontSize: "16px",
   },
 };
-
 export default TodoItem;

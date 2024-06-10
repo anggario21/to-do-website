@@ -67,9 +67,13 @@ const styles = {
   container: {
     textAlign: "center",
     padding: "12px",
+    backgroundColor: "#121212",
+    color: "#ffffff",
+    minHeight: "100vh",
   },
   title: {
     fontSize: "36px",
+    color: "#ffffff",
   },
 };
 
