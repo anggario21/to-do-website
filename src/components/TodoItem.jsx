@@ -24,8 +24,9 @@ const styles = {
     fontSize: "24px",
     // Tambahkan styles di bawah ini
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
+    padding: "20px",
   },
   // Tambahkan styles di bawah ini
   checkbox: {
