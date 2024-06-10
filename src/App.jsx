@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Todos from "./components/todos";
+import TodoForm from "./components/TodoForm";
 
 const dummyData = [
   {
@@ -22,7 +23,24 @@ const dummyData = [
 function App() {
   const [todos, setTodos] = useState(dummyData);
 
-  console.log(todos);
+  const deleteTodo = (todoId) => {
+    console.log(`delete {$todoId}`);
+  };
+
+  const addTodo = (todoTitle) => {
+    if (todoTitle === "") {
+      return;
+    }
+
+    const newTodo = {
+      id: todos.length + 1,
+      title: todoTitle,
+      completed: false,
+    };
+
+    const updatedTodos = todos.concat(newTodo);
+    setTodos(updatedTodos);
+  };
 
   const toggleCompleted = (todoId) => {
     const updatedTodos = todos.map((todo) => {
@@ -37,7 +55,9 @@ function App() {
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>My Todo List</h1>
-      <Todos todos={todos} toggleCompleted={toggleCompleted} />
+      {/* Teruskan function addTodo sebagai props */}
+      <TodoForm addTodo={addTodo} />
+      <Todos todos={todos} toggleCompleted={toggleCompleted} deleteTodo={deleteTodo} />
     </div>
   );
 }
