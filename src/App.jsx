@@ -24,7 +24,8 @@ function App() {
   const [todos, setTodos] = useState(dummyData);
 
   const deleteTodo = (todoId) => {
-    console.log(`delete {$todoId}`);
+    const updatedTodos = todos.filter((todo) => todo.id !== todoId);
+    setTodos(updatedTodos);
   };
 
   const addTodo = (todoTitle) => {
